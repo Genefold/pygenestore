@@ -1,8 +1,8 @@
 [package]
 name = "pygenestore"
-version = "0.10.0"
+version = "0.72.0"
 edition = "2024"
-description = "Numpy arrays to Lance storage format"
+description = "Python bindings for genegraph-storage: Lance and Zarr backends"
 authors = ["Lorenzo <tunedconsulting@gmail.com>"]
 license = "MIT OR Apache-2.0"
 repository = "https://github.com/tuned-org-uk/pygenestore"
@@ -40,21 +40,16 @@ name = "genestore"
 crate-type = ["cdylib"]
 
 [dependencies]
-pyo3 = { version = "0.27.2", features = ["extension-module"] }
-numpy = "0.27.1"
-genegraph-storage = "0.10.0"
-pyo3-async-runtimes = { version = "0.27", features = ["tokio-runtime"] }
+pyo3 = { version = "0.29", features = ["extension-module"] }
+numpy = "0.29"
+genegraph-storage = "0.72"
+pyo3-async-runtimes = { version = "0.29", features = ["tokio-runtime"] }
 tokio = { version = "1", features = ["rt-multi-thread", "macros"] }
-smartcore = "^0.4.8"
-log = "^0.4"
-env_logger = "0.11.8"
-uuid = { version = "1.19.0", features = ["v4"] }
-short-uuid = "0.2.0"
-ndarray = "0.17.1"
-
-[dev-dependencies]
-tokio = { version = "1", features = ["full", "test-util"] }
-approx = "0.5"
+smartcore = "0.6.14"
+sprs = "0.11.5"
+arrow = { version = "^60", features = ["pyarrow"] }
+log = "0.4"
+env_logger = "0.11"
 
 [build-dependencies]
-pyo3-build-config = "0.27.2"
+pyo3-build-config = "0.29"

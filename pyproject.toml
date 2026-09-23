@@ -32,6 +32,15 @@ classifiers = [
 ]
 dynamic = ["version"]
 
+[dependency-groups]
+dev = [
+    "pytest>=9",
+    "pytest-asyncio>=1.4",
+    "numpy>=2.0",
+    "pyarrow>=20",
+    "scipy>=1.14",
+]
+
 [project.urls]
 Homepage = "https://github.com/tuned-org-uk/pygenestore"
 Repository = "https://github.com/tuned-org-uk/pygenestore.git"
