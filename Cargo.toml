@@ -17,7 +17,6 @@ exclude = [
     ".git/*",
     ".github/*",
     "*.tmp",
-    "*.md",
     "*.bib",
     "*.cff",
     "test_data/*",
